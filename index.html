@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Assign-02-HTML-CSS-JS -->
+<html lang="en-ca">
+  <head>
+  <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="description" content="Music Rate">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Rory Mackay">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- For the favicon on this page -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav1_index/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav1_index/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav1_index/favicon-16x16.png">
+    <link rel="manifest" href="./fav1_index/site.webmanifest">
+    <!-- To Use Googles MDL -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-deep_orange.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>How much music do you listen to?</title>
+  </head>
+  <body>
+    <!-- For MDL compatibility -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <center><span class="mdl-layout-title">How much music do you listen to?</span></center>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <center><h4>Use this tool to calculate how much music you listen to!</h4></center>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <center><p>Enter how much music you listen to per day (minutes):</p></center>
+          <center><div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="inputPounds"
+            />
+            <label class="mdl-textfield__label" for="inputPounds">Ex: 65</label>
+            <span class="mdl-textfield__error">*Please enter a number*</span>
+          </div></center>
+        </form>
+
+       <!-- Numeric Textfield -->
+        <form action="#">
+          <center><p>Enter your age (years):</p></center>
+          <center><div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="inputPounds"
+            />
+            <label class="mdl-textfield__label" for="inputPounds">Ex: 29</label>
+            <span class="mdl-textfield__error">*Please enter a number*</span>
+          </div></center>
+        </form>
+
+        <!-- Raised button with ripple -->
+        <center><button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button></center>
+        <br></br>
+        <p>
+        <center><div id="answers">
+        </div></center>
+        </p>
+        <!-- Image -->
+        <center><img src="./images/twopound.webp" alt="rectangle" width="20%" height="40%"/></center>
+      </main>
+    </div>
+  </body>
+</html>
