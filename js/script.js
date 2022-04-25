@@ -18,16 +18,17 @@ function calculateWeek () {
   document.getElementById('answers').innerHTML = 'In one week, you listen to ' + week.toFixed(2) + ' hours of music'
 
   //Dividing as per the weekly music time
-  if (week < 3.00)
+  if (week < 3.00) {
     result = "<br>Hmm not too much!";
- 
-  else if (bmi >= 18.6 && bmi < 24.9)
-     result = "<br> You're Normal Weight!!";
- 
-  else if (24.9 < bmi)
-    result = "<br> You're Overweight!!!";
-  else
+  } else if (week >= 3.00 && week < 24.94) {
+    result = "<br> You're about average!";
+  } else if (4.00 < week) {
+    result = "<br> Wow, that's alot!";
+  } else if (168 < week) {
+    result = "<br> Thats impossible ... there are 168 hours in a week!";
+  } else {
     result = "<br> Invalid Answers"
+  } 
 }
 
 /**
