@@ -29,6 +29,12 @@ h4 {
 
 p {
   color: #ffebdb;
+  font-weight: bold;
+}
+
+div {
+  color: #ffebdb;
+  font-weight: bold;
 }
 
 p::selection {
