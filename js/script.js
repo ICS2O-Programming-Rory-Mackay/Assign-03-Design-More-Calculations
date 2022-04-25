@@ -20,15 +20,12 @@ function calculateWeek () {
   //Dividing as per the weekly music time
   if (week < 3.00) {
     result = "<br>Hmm not too much!";
-  } else if (week >= 3.00 && week < 24.94) {
+  } else if (week >= 3.00 && week < 4.00) {
     result = "<br> You're about average!";
-  } else if (4.00 < week) {
+  } else if (4.00 =< week && week < 168) {
     result = "<br> Wow, that's alot!";
-  } else if (168 < week) {
-    result = "<br> Thats impossible ... there are 168 hours in a week!";
   } else {
-    result = "<br> Invalid Answers"
-  } 
+    result = "<br> Thats impossible ... there are 168 hours in a week!";
 }
 
 /**
