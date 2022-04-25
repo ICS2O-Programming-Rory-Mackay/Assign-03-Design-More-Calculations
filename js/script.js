@@ -7,21 +7,21 @@
 /**
  * This function how much music you listen to in a week
  */
-function calculateweek () {
+function calculateWeek () {
   // input
-  let pounds = parseFloat(document.getElementById('inputPounds').value)
+  let minutes = parseFloat(document.getElementById('inputMinutes').value)
 
   // process
-  let kilos = pounds / 2.20462262
+  let week = minutes * 60 * 168
 
   // output
-  document.getElementById('answers').innerHTML = 'The amount of pounds in kilos is ' + kilos.toFixed(2) + ' kg'
+  document.getElementById('answers').innerHTML = 'In one week, you listen to ' + week.toFixed(2) + ' hours of music'
 }
 
 /**
  * This function calculates how much music you listen to in a year
  */
-function calculateyear () {
+function calculateYear () {
   // input
   let kilos = parseFloat(document.getElementById('inputKilos').value)
 

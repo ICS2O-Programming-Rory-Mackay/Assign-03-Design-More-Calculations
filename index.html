@@ -41,9 +41,9 @@
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="inputPounds"
+              id="inputMinutes"
             />
-            <label class="mdl-textfield__label" for="inputPounds">Ex: 65</label>
+            <label class="mdl-textfield__label" for="inputMinutes">Ex: 65</label>
             <span class="mdl-textfield__error">*Please enter a number*</span>
           </div></center>
         </form>
@@ -66,7 +66,8 @@
         <!-- Raised button with ripple -->
         <center><button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
+          onclick="calculateWeek()"
+          onclick="calculateYear()"
         >
           Calculate
         </button></center>
