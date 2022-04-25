@@ -38,6 +38,6 @@ div {
 }
 
 p::selection {
-  background: #003975;
-  color: #ffd5b3;
+  background: #00a8e0;
+  color: #a80000;
 }
