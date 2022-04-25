@@ -12,7 +12,7 @@ function calculateWeek () {
   let minutes = parseFloat(document.getElementById('inputMinutes').value)
 
   // process
-  let week = minutes * 60 * 168
+  let week = (minutes / 60) * 7
 
   // output
   document.getElementById('answers').innerHTML = 'In one week, you listen to ' + week.toFixed(2) + ' hours of music'
