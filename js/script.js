@@ -45,11 +45,11 @@ function calculateYear () {
   let result;
   
   //Dividing as per the lifetime music time
-  if (lifetime < 4000) {
+  if (lifetime < 10000) {
     result = "<br>Not that much. You probably aren't very old.";
-  } else if (lifetime >= 4000 && lifetime < 10000) {
-    result = "<br> You're about average!";
   } else if (lifetime >= 10000 && lifetime < 40000) {
+    result = "<br> You're about average!";
+  } else if (lifetime >= 40000 && lifetime < 100000) {
     result = "<br> Wow, that's alot!";
   } else {
     result = "<br> Thats craaazy! You must be immortal or something.";
