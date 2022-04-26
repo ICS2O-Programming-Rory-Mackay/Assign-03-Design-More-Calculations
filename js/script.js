@@ -8,25 +8,27 @@
  * This function how much music you listen to in a week
  */
 function calculateWeek () {
-  //Dividing as per the weekly music time
-  if (week < 3.00) {
-    result = "<br>Hmm not too much!";
-  } else if (week >= 3.00 && week < 4.00) {
-    result = "<br> You're about average!";
-  } else if (4.00 =< week && week < 168) {
-    result = "<br> Wow, that's alot!";
-  } else {
-    result = "<br> Thats impossible ... there are 168 hours in a week!";
-  }
-}``
   // input
   let minutes = parseFloat(document.getElementById('inputMinutes').value)
 
   // process
-  let week = (minutes / 60) * 7
+  let week = minutes / 60 * 7
+  let result;
+  
+  //Dividing as per the weekly music time
+  if (week < 3.00) {
+    result = "<br>Hmm not too much!";
+  } else if (week >= 3 && week < 4) {
+    result = "<br> You're about average!";
+  } else if (week >= 4 && week < 168) {
+    result = "<br> Wow, that's alot!";
+  } else {
+    result = "<br> Thats impossible ... there are 168 hours in a week!";
+  }
 
   // output
-  document.getElementById('answers').innerHTML = 'In one week, you listen to ' + week.toFixed(2) + ' hours of music'
+  document.getElementById('answers').innerHTML = 'In one week, you listen to ' + week.toFixed(2) + ' hours of music' + result
+}
 
 /**
  * This function calculates how much music you listen to in a year
