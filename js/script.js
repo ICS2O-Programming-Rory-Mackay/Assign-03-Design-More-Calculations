@@ -16,11 +16,11 @@ function calculateWeek () {
   let result;
   
   //Dividing as per the weekly music time
-  if (week < 3.00) {
+  if (week < 18.00) {
     result = "<br>Hmm not too much!";
-  } else if (week >= 3 && week < 4) {
+  } else if (week >= 18 && week < 24) {
     result = "<br> You're about average!";
-  } else if (week >= 4 && week < 168) {
+  } else if (week >= 24 && week < 168) {
     result = "<br> Wow, that's alot!";
   } else {
     result = "<br> Thats impossible ... there are 168 hours in a week!";
@@ -42,7 +42,19 @@ function calculateYear () {
   
   // process
   let lifetime = (minutes / 60) * 365 * years
-
+  let result;
+  
+  //Dividing as per the lifetime music time
+  if (lifetime < 4000) {
+    result = "<br>Not that much. You probably aren't very old.";
+  } else if (lifetime >= 4000 && lifetime < 10000) {
+    result = "<br> You're about average!";
+  } else if (lifetime >= 10000 && lifetime < 40000) {
+    result = "<br> Wow, that's alot!";
+  } else {
+    result = "<br> Thats craaazy! You must be immortal or something.";
+  }
+  
   // output
-  document.getElementById('answers2').innerHTML = 'At this pace, you have listened to ' + lifetime.toFixed(2) + ' hours of music in your lifetime'
+  document.getElementById('answers2').innerHTML = 'At this pace, you have listened to ' + lifetime.toFixed(2) + ' hours of music in your lifetime' + result
 }
