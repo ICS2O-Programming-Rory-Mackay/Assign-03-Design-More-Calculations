@@ -4,6 +4,7 @@
 */
 
 body {
+  /* Gradient backround from: https://codepen.io/P1N2O/pen/pyBNzX */
   background: linear-gradient(-45deg, #ef734d, #ffd91a, #020080, #00bfff);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
